@@ -1,20 +1,20 @@
-@import url('reset.css');
+ @import url('reset.css');
 .hidden { position: absolute; width: 1px; height: 1px; clip: rect(1px 1px 1px 1px); /* IE6 & 7 */ clip: rect(1px, 1px, 1px, 1px); }
-body { line-height: 1; height: 100%; width: 100%; font-style: italic; color: #333333; background: url(../images/home_bg.jpg) no-repeat center top; background-size: cover; font-family: 'Open Sans', sans-serif; }
-.container { background: url(../images/map.jpg) no-repeat center bottom; background-size: contain; 
- -webkit-user-select: none;   
-  -moz-user-select: none;     
-  -ms-user-select: none;     
-   -o-user-select: none;
-  user-select: none; 
+body { line-height: 1; height: 100%; width: 100%; font-style: italic; color:#ccc; font-family: 'Open Sans', sans-serif; background:url(../images/home.jpg) no-repeat center bottom; background-size: cover;  background-attachment: fixed;}
+.container {
+/*  -webkit-user-select: none;   
+ -moz-user-select: none;     
+ -ms-user-select: none;     
+  -o-user-select: none;
+ user-select: none;  */
  
 
 }
-#home-page { background: rgba(250,250,250,0.98); }
-#about-page { background: rgba(250,250,250,0.96); }
-#skill-page { background: rgba(250,250,250,0.96); }
-#work-page { background: rgba(250,250,250,0.96); }
-#contact-page { background: rgba(250,250,250,0.96); }
+/* #home-page {  }
+#about-page { background:#272727; }
+#skill-page { background:#272727; }
+#work-page { background: #272727; }
+#contact-page { background: #272727; } */
 nav .menu_wrap { margin: 0 5%; }
 #menu_btn { display: none; }
 
@@ -23,28 +23,30 @@ nav .menu_wrap { margin: 0 5%; }
  color: #fff;
 }
 ::selection { background-color: #27A3C2; color: #fff; }
-.home-content { position: absolute; left: 50%; top: 50%; width: 661px; text-transform: uppercase; font-style: normal; color: #646464; text-align: center; margin: -162px 0 0 -329px; }
+.home-content { position: absolute; left: 50%; top: 50%; width: 661px; text-transform: uppercase; font-style: normal;   text-align: center; margin: -162px 0 0 -329px; }
 .home-content h1,
 .home-content h3,
 .home-content h6 { width: 100%; font-weight: 100; padding: 15px 0; display: inline-block; }
 .home-content h1 { font-size: 44px; }
 .home-content h3 { font-size: 50px; font-weight: 600; color: #55A5AD; }
-.home-content h6 { font-size: 18px; font-style: italic; text-transform: capitalize; border-top: 1px solid #ccc; margin-top: 10px; }
+.home-content h6 { font-size: 18px; font-style: italic; text-transform: capitalize; border-top: 1px solid #323131; margin-top: 10px; }
 .home-content #scroll-info { width: 100%; text-align: center; }
 .home-content #scroll-info div { width: 100%; }
 .page { margin: auto; max-width: 1130px; width: 100%; }
-.page .port-info { float: left; width: 96%; color: #333333; padding: 0 2%; margin-top: 145px; }
+.page .port-info { float: left; width: 96%;   padding: 0 2%; margin-top: 145px; }
 .page .port-info .prf-img { width: 128px; height: 128px; border: 5px solid #fff; border-radius: 50%; box-shadow: 0 0 5px #e7e7e7; overflow: hidden; display: inline-block; }
 .page .port-info h1 { text-align: center; font-size: 36px; margin: 11% 0 5%; width: 100%; }
 .page .port-info p { text-align: center; line-height: 33px; margin: 50px 0; width: 100%; font-size: 21px; }
 .rspo_cont { display: none; }
 .tittle { text-align: center; font-size: 36px; margin: 150px 0 0; color: #FFF; width: 100%; }
-.downlink a { background: url("../image/enter.png") no-repeat center 16px; bottom: 7%; margin-left:-18px; height: 51px; position: absolute; width: 45px; z-index: 100; transition: ease-in-out.5s; -moz-transition: ease-in-out.5s; -ms-transition: ease-in-out.5s; -o-transition: ease-in-out.5s; -webkit-transition: ease-in-out.5s; }
-.downlink a:hover { transition: ease-in-out .99s; -moz-transition: ease-in-out .99s; -ms-transition: ease-in-out .99s; -o-transition: ease-in-out .99s; -webkit-transition: ease-in-out .99s; background-position: center -59px; }
+
+
+
 .skill-info { float: left; width: 100%; font-size: 20px; }
 .skill-info h1 { text-align: center; font-size: 36px; margin: 11% 0 5%; width: 100%; }
-.skill-info .skill-graph { float: left; margin-top: 200px; width: 100%; }
-.skill-graph p { margin-bottom: 30px; text-align: inherit; }
+.skill-info .skill-graph { float: left; margin-top: 100px; width: 50%; text-align: left }
+.skill-info .skill-icon { float: right; margin-top: 100px; width: 50%; }
+.skill-graph p {   font-size: 24px;    margin-bottom: 40px; text-align: inherit; }
 .skill-graph ul { float: left; width: 100%; margin: 10px 0 100px; }
 .skill-graph ul li { display: inline-block; width: 220px; padding: 7% 0; text-align: center; margin: 0 2%; background-size: contain !important; }
 .skill-graph ul li strong { float: left; width: 100%; font-weight: 100; font-style: normal; font-size: 50px; color: #27A3C2; }
@@ -145,6 +147,122 @@ nav .menu_wrap { margin: 0 5%; }
 .page-info .skl.active{   top: 0px; }
 .page-info .wrk.active{  top: 0px; }
 .page-info .cnt.active{   top: 0px;}
+
+
+.downlink {  bottom: 7%; margin-left:-18px; height: 51px; position: absolute; width: 45px;}
+
+
+
+
+ .cover-scroll .chevron {
+    animation: 3s ease-out 0s normal none infinite running move;
+    height: 8px;
+    opacity: 0;
+    position: absolute;
+    transform: scale3d(0.5, 0.5, 0.5);
+    width: 28px;
+}
+ .cover-scroll .chevron:first-child {
+    animation: 3s ease-out 1s normal none infinite running move;
+}
+ .cover-scroll .chevron:nth-child(2) {
+    animation: 3s ease-out 2s normal none infinite running move;
+}
+ .cover-scroll .chevron:after,  .cover-scroll .chevron:before {
+    background: #ccc;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 51%;
+}
+ .cover-scroll .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+ .cover-scroll .chevron:after {
+    right: 0;
+    transform: skew(0deg, -30deg);
+    width: 50%;
+}
+
+@keyframes move {
+25% {
+    opacity: 1;
+}
+33% {
+    opacity: 1;
+    transform: translateY(30px);
+}
+67% {
+    opacity: 1;
+    transform: translateY(40px);
+}
+100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+}
+}
+
+
+.skill-graph .progress-background {
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+}
+.skill-graph .progress-background .percent {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.skill-graph .progress-background .percent span{
+float: right;
+}
+.skill-graph .bar-outer {
+    background: rgba(255, 255, 255, 0.09);
+    height: 7px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.skill-graph .bar {
+    animation: 10s linear 0s normal none infinite running progress_striped;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+.skill-graph .bar {
+    bottom: 0;
+    height: 8px;
+    position: absolute;
+    z-index: 11;
+}
+@keyframes progress_striped {
+0% {
+    background-position: left center;
+}
+100% {
+    background-position: right center;
+}
+}
+@keyframes progress_striped {
+0% {
+    background-position: left center;
+}
+100% {
+    background-position: right center;
+}
+}
+@keyframes progress_striped {
+0% {
+    background-position: left center;
+}
+100% {
+    background-position: right center;
+}
+}
+
+
 
 
 
