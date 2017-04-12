@@ -1,323 +1,459 @@
-@import url('reset.css');
-.hidden { position: absolute; width: 1px; height: 1px; clip: rect(1px 1px 1px 1px); /* IE6 & 7 */ clip: rect(1px, 1px, 1px, 1px); }
-body { line-height: 1; height: 100%; width: 100%; font-style: italic; color:#ccc; font-family: 'Open Sans', sans-serif; background:url(../images/home.jpg) no-repeat center bottom; background-size: cover;  background-attachment: fixed;}
-.container {
-/*  -webkit-user-select: none;   
- -moz-user-select: none;     
- -ms-user-select: none;     
-  -o-user-select: none;
- user-select: none;  */
- 
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
 
-}
-/* #home-page {  }
-#about-page { background:#272727; }
-#skill-page { background:#272727; }
-#work-page { background: #272727; }
-#contact-page { background: #272727; } */
-nav .menu_wrap { margin: 0 5%; }
-#menu_btn { display: none; }
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--bing webmaster-->
+<meta name="msvalidate.01" content="B7B7186FB4EE61E1FBD66F3DF98F9188" />
+<!--bing webmaster-->
+<!--<meta name="googlebot" content="noindex" />-->
+<meta name="description" content="Hello! I am Sreelal ks and I am a Front end Developer based in Kerala, India. I make quality designs and hand-coded web solutions. I specialize in HTML5, CSS3, JAVASCRIPT. " >          
 
-::-moz-selection {
- background-color:#27A3C2;
- color: #fff;
-}
-::selection { background-color: #27A3C2; color: #fff; }
-.home-content { position: absolute; left: 50%; top: 50%; width: 661px; text-transform: uppercase; font-style: normal;   text-align: center; margin: -162px 0 0 -329px; }
-.home-content h1,
-.home-content h3,
-.home-content h6 { width: 100%; font-weight: 100; padding: 15px 0; display: inline-block; }
-.home-content h1 { font-size: 44px; }
-.home-content h3 { font-size: 50px; font-weight: 600; color: #55A5AD; }
-.home-content h6 { font-size: 18px; font-style: italic; text-transform: capitalize; border-top: 1px solid #323131; margin-top: 10px; }
-.home-content #scroll-info { width: 100%; text-align: center; }
-.home-content #scroll-info div { width: 100%; }
-.page { margin: auto; max-width: 1130px; width: 100%; }
-.page .port-info { float: left; width: 96%;   padding: 0 2%; margin-top:35px; }
-.page .port-info .prf-img { width: 128px; height: 128px; border: 5px solid #fff; border-radius: 50%; box-shadow: 0 0 5px #e7e7e7; overflow: hidden; display: inline-block; }
-.page .port-info h1 { text-align: center; font-size: 36px; margin: 11% 0 5%; width: 100%; }
-.page .port-info p { text-align: center; line-height: 40px; margin: 50px 0; width: 100%; font-size: 21px;font-weight: 600; }
-.rspo_cont { display: none; }
-.tittle { text-align: center; font-size: 36px; margin: 150px 0 0; color: #FFF; width: 100%; }
+<meta name="keywords" content="Web Design india, Front end Developer india, Front end Developer kerala, web design sreelal, sreelal, sreelalks, sreelal ks, website design kerala, web designing kottayam kerala, Freelance website design, sreelalks Cochin, sreelalks india kerala" >
+<meta name="author" content="Sreelal ks">
+<meta property="og:title" content="Sreelal ks"/>
+<meta property="og:image" content="http://sreelalks.com/image/sreelal.jpg"/>
+<meta property="og:site_name" content="sreelalks"/>
+<meta property="og:url" content="http://sreelalks.com/" />
+<title>Sreelal ks -  Website Design, Freelance Website designer, Web Design in Kottayam Kerala India</title>
+<link rel="shortcut icon" href="image/tabico.png" type="image/png">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/style3.css" />
+<!--[if lt IE 10]><link rel="stylesheet" type="text/css" href="css/style3IE.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+<!--[if IE]>
+<script type="text/javascript">
+var console = { log: function() {} };
+</script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.min1.8.3.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
 
-
-
-.skill-info { float: left; width: 100%; font-size: 20px; }
-.skill-info h1 { text-align: center; font-size: 36px; margin: 11% 0 5%; width: 100%; }
-.skill-info .skill-graph { float: left; margin-top: 100px; width: 50%; text-align: left }
-.skill-info .skill-icon { float: right; margin-top: 100px; width: 50%; }
-.skill-graph p {   font-size: 24px;    margin-bottom: 40px; text-align: inherit; }
-.skill-graph ul { float: left; width: 100%; margin: 10px 0 100px; }
-.skill-graph ul li { display: inline-block; width: 220px; padding: 7% 0; text-align: center; margin: 0 2%; background-size: contain !important; }
-.skill-graph ul li strong { float: left; width: 100%; font-weight: 100; font-style: normal; font-size: 50px; color: #27A3C2; }
-.skill-graph ul li span { float: left; width: 100%; padding: 7px 0; font-size: 20px; }
-.skill-graph ul .html { background: url(../image/htmlcss.png) no-repeat center center; }
-.skill-graph ul .webdesign { background: url(../image/photoshop.png) no-repeat center center; }
-.skill-graph ul .jquery { background: url(../image/jquery.png) no-repeat center center; }
-.skill-graph ul .php { background: url(../image/php.png) no-repeat center center; }
-.skill-graph ul .mob-rspo { background: url(../image/mobile.png) no-repeat center center; }
-#work-page .slide .intro {/* border:1px solid #FFF; */ margin-top: 24px; }
-.wrap-port { margin: auto; width: 100%; max-width: 641px; max-height: 509px; }
-.wrap-port img { width: 100%; }
-.wrap-port .work-dtls { float: left; background: rgba(0,0,0,0.95); height: 313px; margin: -76% 0 0 5%; position: relative; z-index: 10; opacity: .0; width: 89.5%; transition-timing-function: ease-out; transition-duration: 1000ms; }
-.wrap-port .work-dtls h2 { text-align: center; color: #FFF; font-size: 28px; margin: 16% 0 2%; }
-.wrap-port .work-dtls h3 { text-align: center; color: #FFF; font-size: 12px; margin: 0px 0 8%; }
-.wrap-port .work-dtls a { text-align: center; color: #FFF; padding: 5px 20px; border: 1px solid #CCC; transition: ease-in-out .5s; }
-.wrap-port .work-dtls a:hover { color: #000; padding: 5px 20px; background: #FFF; border: 1px solid #CCC; transition: ease-in-out .5s; }
-.wrap-port:hover .work-dtls { opacity: 1; transition-timing-function: ease-out; transition-duration: 500ms; }
-.contact-info { width: 100%; }
-.contact-info h2 { margin-bottom: 15px; font-size: 22px; }
-.contact-info .cont-form { margin: auto; width: 90%; }
-.contact-info .cont-form .left-form { float: left; width: 49%; }
-.contact-info .cont-form .right-form { float: right; width: 49%; }
-.row { float: left; width: 100%; margin: 10px 0; }
-#form1 .success { text-align: left; line-height: 20px; color: #FFF; font-size: 18px; }
-.row input[type='text'],
-.row input[type='email'],
-.row input[type='tel'] { float: left; width: 100%; height: 45px; border: 1px solid #d7d7d7; font-size: 18px; text-indent: 15px; background: #fff; color: #333; }
-.row textarea { float: left; width: 100%; height: 100px; border: 1px solid #d7d7d7; padding-top: 15px; font-size: 18px; text-indent: 15px; background: #fff; color: #333; resize: none; }
-.btns a { float: left; width: 100px; height: 46px; line-height: 46px; font-size: 18px; border: 1px solid #d7d7d7; color: #333; text-indent: -175px; overflow: hidden; margin-right: 10px; }
-.row .submitbtn { background: #fff url(../image/send.png) no-repeat center center; transition: ease-in-out .5s; }
-.row .resetbtn { background: #fff url(../image/reset.png) no-repeat center center; transition: ease-in-out .5s; }
-.row a:hover { background-position: 100px center; text-indent: 0px; transition: ease-in-out .5s; }
-#form1 .error,
-#form1 .empty { float: left; display: none; font-size: 14px; color: #ff0000; text-align: left; line-height: 18px; margin-top: 3px }
-.contact-info .cont_add { width: 90%; margin: auto; }
-.contact-info .cont-dtls { float: left; width: 100%; margin-top: 40px; text-align: left;line-height: 1.5; font-size: 20px; }
-.cont-dtls .row-left { float: left; display: inline-block; width: 49%; }
-.cont-dtls .row-right { float: right; display: inline-block; width: 49%; }
-.cont-dtls a { color: #03a2b2  }
- 
- 
- 
-
-
-
-.social-net { float: right;  }
- .social-net ul li { float: left;  }
-.social-net ul li a { float: left; width:100px;   border-left: 1px solid #e5e5e5;  padding: 50px 0; 
- transition: background-color 0.99s ease;  }
-
-
-.social-net ul li .facebook { background:url(../image/facebook.png) no-repeat center 34px;  }
-.social-net ul li .twitter { background:url(../image/twitter.png) no-repeat center 34px;  }
-
-.social-net ul li .google { background:url(../image/google-plus.png) no-repeat center 34px;  }
-.social-net ul li .linked { background:url(../image/linkedin.png) no-repeat center 34px;  }
-
-.social-net ul li a:hover {background-position:center -42px;   transition: background-color 0.99s ease;    } 
-
-
- 
-.social-net ul li .facebook:hover { background-color: #37589F;  }
-.social-net ul li .twitter:hover { background-color: #1BD7ED;   }
-.social-net ul li .google:hover { background-color: #B70000;  }
-.social-net ul li .linked:hover { background-color: #005A87;   }
+$(document).ready(function() {
+  var pepe = $.fn.fullpage({
+      //slidesColor: ['#000', '#3FA2AD', '#7BAABE', 'whitesmoke', '#ccddff'],
+      anchors: ['home', 'about', 'skill', 'work', 'contact'],
+      menu: '#menu'
+  });
   
+});
+</script>
+<script src="js/jquery.cycle.all.2.74.js" type="text/javascript"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('#scroll-info').cycle({
+		fx: 'scrollUp' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+ </script>
+<script type="text/javascript" src="js/forms.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-#home-page.active .top-bar { opacity: 0; height: 0px; transition: .9s all ease-in-out .3s;  }
-#home-page .top-bar { box-shadow: 0 0 6px #ccc; opacity: 1; height: 100px; width:100%; overflow:hidden;  background:#fff; position:fixed; top:0; z-index:1500;transition: .9s all ease-in-out .5s; }
+  ga('create', 'UA-45921320-1', 'sreelalks.com');
+  ga('send', 'pageview');
 
-#home-page.active .top-bar  .page{  margin-top:-100px; transition: .9s all ease-in-out .3s;  }
+</script>
+</head>
 
-#home-page .top-bar .page{ margin-top:0px;transition: .9s all ease-in-out .5s;  }
+<body>
+<h1 class="hidden">Website Design and Development.</h1>
+<section class="container">
+  <h2 class="hidden">Sreelal Web Designer </h2>
+  
+  <!--Home-->
+  <article class="section" id="home-page">
+    <!-- <div class="top-bar">
+      <article class="page">
+        <div class="logo"> <a href="#home"> <img src="image/sreelal_logo.png" width="65" alt="sreelalks logo"> </a> </div>
+        <div class="page-info" id="menu">
+          <h2 data-menuanchor="about" class="abt">About Me</h2>
+          <h2 data-menuanchor="skill"  class="skl">My Skill</h2>
+          <h2 data-menuanchor="work" class="wrk">My Work</h2>
+          <h2 data-menuanchor="contact" class="cnt">Contact Me</h2>
+        </div>
+        <section class="social-net">
+          <ul>
+            <li><a class="facebook" href="https://www.facebook.com/pages/Web-DesignDevelopment/562184697177379?ref=hl"  target="_blank"> </a></li>
+            <li><a class="twitter" href="https://twitter.com/sreelalks1" target="_blank"> </a></li>
+            <li><a class="linked" href="http://lnkd.in/324ABN" target="_blank"> </a></li>
+            <li><a class="google" href="https://plus.google.com/105380098243685407167/posts" target="_blank"> </a></li>
+          </ul>
+        </section>
+      </article>
+    </div> -->
+    
+    <!-- <h3 class="hidden"> Freelance Web Designer in kottayam</h3>-->
+    
+    <section class="home-content"> <!-- <img src="image/sreelal_logo.png" width="86" height="95"> -->
+  <h1>Hi, </h1>
+  <h1><strong>I AM SREELAL KS</strong> </h1>
+  <div id="scroll-info">
+    <div>
+      <h3> Front-end Developer</h3>
+    </div>
+    <div>
+      <h3> UI/UX Designer</h3>
+    </div>
+  </div>
+  <h6>I am an unschooled artist. I express my thoughts through creations.</h6>
+</section> 
+    
 
-.top-bar .logo{float:left; margin:15px 0 0 0;}
+   <a href="#about" class="cover-scroll downlink">
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+  </a>
+                     
+  </article>
+  <!--Home--> 
+  
+  <!--about-->
+  <article class="section home" id="about-page">
+    <h3 class="hidden"> Graphics Designer </h3>
+    <article class="page">
+      <h2 class="hidden"> Web UI Designer based in Kerala</h2>
+      <section class="port-info">
+       <!--  <div class="prf-img"> <img src="images/about-prf.jpg"  alt="image" width="128" height="128"></div> -->
 
+        <svg  version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="150px" height="150px">
+          <g transform="translate(1 1)">
+            <g>
+              <g>
+                <path d="M472.6,7.533H37.4C16.067,7.533-1,24.6-1,45.933v277.333v38.4c0,21.333,17.067,38.4,38.4,38.4h152.157     c1.209,14.852-5.492,29.407-17.331,37.547l-15.36,11.093c-1.583,0.95-2.811,2.253-3.646,3.733     c-10.439,3.21-17.687,12.702-17.687,24.427c0,14.507,11.093,25.6,25.6,25.6h187.733c14.507,0,25.6-11.093,25.6-25.6     c0-12.351-8.044-22.223-19.388-24.885c-0.726-1.289-1.666-2.425-2.799-3.275l-15.36-11.093     c-12.057-8.289-18.113-22.568-17.016-37.547H472.6c21.333,0,38.4-17.067,38.4-38.4v-38.4V45.933     C511,24.6,493.933,7.533,472.6,7.533z M16.067,45.933c0-11.947,9.387-21.333,21.333-21.333h435.2     c11.947,0,21.333,9.387,21.333,21.333V306.2H16.067V45.933z M348.867,485.4H161.133c-5.12,0-8.533-3.413-8.533-8.533     s3.413-8.533,8.533-8.533h1.707h184.32h1.707c5.12,0,8.533,3.413,8.533,8.533S353.987,485.4,348.867,485.4z M325.827,451.267     H183.32c16.213-11.947,24.747-31.573,23.893-51.2h95.573C301.08,419.693,310.467,439.32,325.827,451.267z M493.933,361.667     c0,11.947-9.387,21.333-21.333,21.333H326.68h-140.8H37.4c-11.947,0-21.333-9.387-21.333-21.333v-38.4h477.867V361.667z" fill="#ccc"/>
+                <path d="M147.48,169.667l62.293-62.293c3.413-3.413,3.413-8.533,0-11.947s-8.533-3.413-11.947,0l-68.267,68.267     c-2.56,2.56-3.413,5.973-1.707,9.387c0.853,1.707,1.707,2.56,2.56,3.413l67.413,67.413c1.707,1.707,3.413,2.56,5.973,2.56     s4.267-0.853,5.973-2.56c3.413-3.413,3.413-8.533,0-11.947L147.48,169.667z" fill="#ccc"/>
+                <path d="M379.587,162.84l-67.413-67.413c-3.413-3.413-8.533-3.413-11.947,0s-3.413,8.533,0,11.947l62.293,62.293l-62.293,62.293     c-3.413,3.413-3.413,8.533,0,11.947c1.707,1.707,3.413,2.56,5.973,2.56s4.267-0.853,5.973-2.56l68.267-68.267     c2.56-2.56,3.413-5.973,1.707-9.387C381.293,164.547,380.44,163.693,379.587,162.84z" fill="#ccc"/>
+                <path d="M274.627,93.72c-4.267-1.707-9.387,1.707-10.24,5.973l-34.133,136.533c-1.707,4.267,1.707,9.387,5.973,10.24     c0,0,0.853,0,1.707,0c4.267,0,7.68-2.56,8.533-5.973L280.6,103.96C282.307,99.693,278.893,94.573,274.627,93.72z" fill="#ccc"/>
+              </g>
+            </g>
+          </g>
+          </svg>
+          
+       
+        <p>Hello!,  I am a <strong>Front end Developer</strong> based in Kerala, India. 
+          I make quality designs and hand-coded web solutions. I specialize in HTML5, CSS3, JAVASCRIPT. 
+          I always build functional, creative, and usable websites as well as web applications by exposing the simplicity and the latest web standards as the main principles, resulting in semantic and seo friendly XHTML and CSS. Please have a look at around some of my works here. Thank you for being here!</p>         
+         
+      </section>
+    </article>
+  </article>
+  <!--about--> 
+  
+  <!--skill-->
+  <article class="section " id="skill-page">
+    <h2 class="hidden"> HTML5, CSS3 Front-end development</h2>
+    <article class="page">
+      <h2 class="hidden">Responsive web design Skill</h2>
+      <section class="skill-info">
 
-.page-info {
-    float: left;
-   
-    margin-top: 31px;
-    width: 55%;
-	position:relative;
-}
-.page-info h2 {    position: absolute;
-    top: 100px; font-size: 30px;
-    width: 100%;transition: .9s all ease-in-out .5s; font-style: normal; color:#27A3C2; text-transform:uppercase;
-    font-weight: 600; }
+<aside class="skill-graph">
+  <p>This is my graph Which tell's you about my level of skill</p>
+  
+  <div class="progress-background m-t-25">
+    <div class="percent m-b-10">HTML5, CSS3 <span class="pull-right">90%</span> </div>
+    <div class="bar-outer">
+      <div class="bar" style="background-color: rgb(0, 210, 255); width: 98%; left: 0px; opacity: 1;"></div>
+    </div>
+  </div>
+    <div class="progress-background">
+    <div class="percent m-b-10">JAVASCRIPT LIBRARY <span class="pull-right">85%</span> </div>
+    <div class="bar-outer">
+      <div class="bar" style="background-color:green; width: 85%; left: 0px; opacity: 1;"></div>
+    </div>
+  </div>
+  
+  <div class="progress-background">
+    <div class="percent m-b-10">RESPONSIVE FRAME WORK<span class="pull-right">80%</span> </div>
+    <div class="bar-outer">
+      <div class="bar" style="background-color:#0038FF; width: 80%; left: 0px; opacity: 1;"></div>
+    </div>
+  </div> 
 
-.page-info h2 span{ text-transform:lowercase; font-size: 16px; font-weight: 100; color:#333; }
+  <div class="progress-background">
+    <div class="percent m-b-10">DESIGN<span class="pull-right">75%</span> </div>
+    <div class="bar-outer">
+      <div class="bar" style="background-color:#FF6500; width: 75%; left: 0px; opacity: 1;"></div>
+    </div>
+  </div>
 
-.page-info .abt.active{  top: 0px; }
-.page-info .skl.active{   top: 0px; }
-.page-info .wrk.active{  top: 0px; }
-.page-info .cnt.active{   top: 0px;}
+</aside>
 
-
-.downlink {  bottom: 7%; margin-left:-18px; height: 51px; position: absolute; width: 45px;}
-.port-info strong { color: #55a5ad; }
-
-
-
-
- .cover-scroll .chevron {
-    animation: 3s ease-out 0s normal none infinite running move;
-    height: 8px;
-    opacity: 0;
-    position: absolute;
-    transform: scale3d(0.5, 0.5, 0.5);
-    width: 28px;
-}
- .cover-scroll .chevron:first-child {
-    animation: 3s ease-out 1s normal none infinite running move;
-}
- .cover-scroll .chevron:nth-child(2) {
-    animation: 3s ease-out 2s normal none infinite running move;
-}
- .cover-scroll .chevron:after,  .cover-scroll .chevron:before {
-    background: #ccc;
-    content: " ";
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 51%;
-}
- .cover-scroll .chevron:before {
-    left: 0;
-    transform: skew(0deg, 30deg);
-}
- .cover-scroll .chevron:after {
-    right: 0;
-    transform: skew(0deg, -30deg);
-    width: 50%;
-}
-
-@keyframes move {
-25% {
-    opacity: 1;
-}
-33% {
-    opacity: 1;
-    transform: translateY(30px);
-}
-67% {
-    opacity: 1;
-    transform: translateY(40px);
-}
-100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-}
-}
-
-
-.skill-graph .progress-background {
-    margin-bottom: 50px;
-    position: relative;
-    width: 100%;
-}
-.skill-graph .progress-background .percent {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.skill-graph .progress-background .percent span{
-float: right;
-}
-.skill-graph .bar-outer {
-    background: rgba(255, 255, 255, 0.09);
-    height: 7px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-}
-.skill-graph .bar {
-    animation: 10s linear 0s normal none infinite running progress_striped;
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-    background-size: 40px 40px;
-}
-.skill-graph .bar {
-    bottom: 0;
-    height: 8px;
-    position: absolute;
-    z-index: 11;
-}
-@keyframes progress_striped {
-0% {
-    background-position: left center;
-}
-100% {
-    background-position: right center;
-}
-}
-@keyframes progress_striped {
-0% {
-    background-position: left center;
-}
-100% {
-    background-position: right center;
-}
-}
-@keyframes progress_striped {
-0% {
-    background-position: left center;
-}
-100% {
-    background-position: right center;
-}
-}
-
-
-
-
-
-
-
- @media all {
-body,
-.page { transition: all 0.5s linear; -o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -webkit-transition: all 0.5s linear; }
-}
- @media only screen and (max-width: 1024px) {
-}
- @media only screen and (max-width: 995px) {
-}
- @media only screen and (max-width: 767px) {
-.page { padding: 0 2%; width: 96%; }
-.skill-info .skill-graph { max-width: 100%; margin: 0px; }
-.skill-info .skill-content { max-width: 100%; margin: 0px; }
-.sp-container { display: none; }
-.rspo_cont { width: 90%; margin: auto; color: #FFF; display: block; }
-.rspo_cont h2 { font-size: 25px; margin: 5px 0; }
-.rspo_cont h3 { font-size: 18px; margin: 5px 0; }
-.rspo_cont h6 { font-size: 12px; margin: 10px 0; }
-#menu li a:before,
-#menu li a:after,
-#menu li a { margin: 0px !important; padding: 11px 0px !important; }
-}
-@media only screen and (max-width: 640px) {
-.home-content h1{font-size: 30px;}
-.home-content h3{font-size: 28px;}
-.home-content h6{line-height: 1.5; width: 50%;}
-.skill-info .skill-graph,.skill-info .skill-icon{width: 100%;}
-}
- @media only screen and (max-width: 479px) {
-.wrap-port img { display: none; }
-.wrap-port .work-dtls { opacity: 1; margin: 23%; width: 53.5%; padding-bottom: 50px; height: auto; background-color: transparent; border: 1px solid #FFF; }
-.contact-info .cont-form,
-.contact-info .cont_add { width: 100%; margin: 0px; }
-.social-net { padding: 0px; }
-#menu_btn { float: right; display: block; padding: 7px 17px; margin-top: 28px; color: #FFF; border: 1px solid #CCC; text-indent: 25px; border-radius: 3px; background: url(../image/menu.png) no-repeat 5px center; }
-#menu { float: right; width: 50%; clear: both; display: none; }
-#menu li { float: right; width: 100%; background: #fff; margin: 1px 0; border-bottom: none; }
-#menu li a { float: right !important; color: #000 !important; width: 100%; margin: 0px !important; padding: 0px 0px !important; text-align: center; }
-#menu li a:before { margin-right: 10px !important; }
-#menu li a:after { margin-left: 10px !important; }
-.page .port-info p { font-size: 15px; line-height: 22px; margin: 19px 0; }
-.wrap-port .work-dtls h2 { font-size: 18px; }
-.wrap-port .work-dtls { background: url(../image/iphone.png) no-repeat center top/contain; border: none; }
-.wrap-port .work-dtls a { padding: 1px 16px; }
-.skill-graph ul { margin: 0px; }
-.skill-graph ul li { padding: 8% 0; width: 31%; }
-.skill-graph ul .php { margin-left: 15%; }
-.contact-info .cont-form .list-pad { float: left; width: 87%; }
-.contact-info .cont-form { height: auto; }
-.row input[type="text"],
-.row input[type="email"],
-.row input[type="tel"] { height: 18px; }
-.cont-dtls .row a span,
-.cont-dtls .row a em { padding: 3px 25px; }
-.contact-info h1 { text-align: left; text-indent: -211px; }
-}
+<aside class="skill-icon">
+<svg version="1.1" id="Layer_1"  x="0px" y="0px" width="250px" height="250px"
+   viewBox="0 0 503.68 503.68" style="enable-background:new 0 0 503.68 503.68;" xml:space="preserve">
+<g transform="translate(1 1)">
+  <path style="fill:#ccc;" d="M250.84,327.746c5.12,0,8.533,4.267,8.533,8.533s-3.413,8.533-8.533,8.533s-8.533-4.267-8.533-8.533
+    S245.72,327.746,250.84,327.746L250.84,327.746z"/>
+  <path style="fill:none;" d="M498.307,37.613v256H378.84V71.746L336.173,3.48h128C481.24,3.48,498.307,20.546,498.307,37.613z
+     M122.84,259.48v34.133H3.373v-256C3.373,20.546,20.44,3.48,37.507,3.48h51.2h34.133v51.2v34.133v34.133v34.133v34.133v34.133
+    V259.48z M336.173,3.48l-42.667,68.267v221.867h-34.133V3.48H336.173z"/>
+  <polygon style="fill:none;" points="336.173,3.48 378.84,71.746 293.507,71.746  "/>
+  <polygon style="fill:none;" points="336.173,293.613 293.507,293.613 293.507,71.746 378.84,71.746 378.84,293.613  "/>
+  <polygon style="fill:none;" points="208.173,447.213 293.507,447.213 293.507,378.947 208.173,378.947  "/>
+  <polygon style="fill:none;" points="122.84,225.346 122.84,191.213 122.84,157.08 122.84,122.946 122.84,88.813 122.84,54.68 
+    122.84,3.48 259.373,3.48 259.373,293.613 122.84,293.613 122.84,259.48   "/>
+  <g>
+    <path style="fill:none;" d="M498.307,293.613v51.2c0,17.067-17.067,34.133-34.133,34.133H293.507h-85.333H37.507
+      c-17.067,0-34.133-17.067-34.133-34.133v-51.2H122.84h136.533h34.133h42.667h42.667H498.307z"/>
+    <path style="fill:none;" d="M464.173,489.88v8.533h-68.267v-8.533c0-14.507,11.093-25.6,25.6-25.6h17.067
+      C453.08,464.28,464.173,475.373,464.173,489.88"/>
+  </g>
+</g>
+<path style="fill:#ccc;" d="M465.173,503.68h-68.267c-2.56,0-4.267-1.707-4.267-4.267v-8.533
+  c0-16.213,13.653-29.867,29.867-29.867h17.067c16.213,0,29.867,13.653,29.867,29.867v8.533
+  C469.44,501.973,467.733,503.68,465.173,503.68z M401.173,495.147h59.733v-4.267c0-11.947-9.387-21.333-21.333-21.333h-17.067
+  c-11.947,0-21.333,9.387-21.333,21.333V495.147z M345.707,503.68h-307.2c-2.56,0-4.267-1.707-4.267-4.267s1.707-4.267,4.267-4.267
+  h12.8v-12.8c0-2.56,1.707-4.267,4.267-4.267c2.56,0,4.267,1.707,4.267,4.267v12.8h25.6v-12.8c0-2.56,1.707-4.267,4.267-4.267
+  s4.267,1.707,4.267,4.267v12.8h25.6v-12.8c0-2.56,1.707-4.267,4.267-4.267c2.56,0,4.267,1.707,4.267,4.267v12.8h25.6v-12.8
+  c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v12.8h25.6v-12.8c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267
+  v12.8h25.6v-12.8c0-2.56,1.707-4.267,4.267-4.267c2.56,0,4.267,1.707,4.267,4.267v12.8h25.6v-12.8c0-2.56,1.707-4.267,4.267-4.267
+  s4.267,1.707,4.267,4.267v12.8h25.6v-12.8c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v12.8h25.6v-12.8
+  c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v12.8h12.8c2.56,0,4.267,1.707,4.267,4.267S348.267,503.68,345.707,503.68z
+   M294.507,452.48c-2.56,0-4.267-1.707-4.267-4.267V414.08c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v34.133
+  C298.773,450.773,297.067,452.48,294.507,452.48z M209.173,452.48c-2.56,0-4.267-1.707-4.267-4.267V414.08
+  c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v34.133C213.44,450.773,211.733,452.48,209.173,452.48z M465.173,384.213
+  H38.507c-19.627,0-38.4-18.773-38.4-38.4v-51.2c0-2.56,1.707-4.267,4.267-4.267h460.8c2.56,0,4.267,1.707,4.267,4.267
+  c0,2.56-1.707,4.267-4.267,4.267H8.64v46.933c0,14.507,15.36,29.867,29.867,29.867h426.667c14.507,0,29.867-15.36,29.867-29.867
+  v-307.2c0-14.507-15.36-29.867-29.867-29.867H379.84c-2.56,0-4.267-1.707-4.267-4.267s1.707-4.267,4.267-4.267h85.333
+  c19.627,0,38.4,18.773,38.4,38.4v307.2C503.573,365.44,484.8,384.213,465.173,384.213z M251.84,350.08
+  c-6.827,0-12.8-5.973-12.8-12.8c0-6.827,5.973-12.8,12.8-12.8c6.827,0,12.8,5.973,12.8,12.8
+  C264.64,344.106,258.667,350.08,251.84,350.08z M251.84,333.013c-2.56,0-4.267,1.707-4.267,4.267c0,2.56,1.707,4.267,4.267,4.267
+  s4.267-1.707,4.267-4.267C256.107,334.72,254.4,333.013,251.84,333.013z M379.84,264.746c-2.56,0-4.267-1.707-4.267-4.267v-153.6
+  c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v153.6C384.107,263.04,382.4,264.746,379.84,264.746z M337.173,264.746
+  c-2.56,0-4.267-1.707-4.267-4.267v-153.6c0-2.56,1.707-4.267,4.267-4.267s4.267,1.707,4.267,4.267v153.6
+  C341.44,263.04,339.733,264.746,337.173,264.746z M294.507,264.746c-2.56,0-4.267-1.707-4.267-4.267V72.746
+  c0-0.853,0-1.707,0.853-2.56L333.76,1.92c1.707-2.56,5.973-2.56,6.827,0l42.667,68.267c0.853,1.707,0.853,2.56,0,4.267
+  c-0.853,1.707-2.56,2.56-3.413,2.56h-51.2c-2.56,0-4.267-1.707-4.267-4.267c0-2.56,1.707-4.267,4.267-4.267h43.52l-34.987-56.32
+  l-38.4,61.44v186.88C298.773,263.04,297.067,264.746,294.507,264.746z M260.373,264.746c-2.56,0-4.267-1.707-4.267-4.267V8.746h-128
+  v42.667h46.933c2.56,0,4.267,1.707,4.267,4.267s-1.707,4.267-4.267,4.267h-46.933v25.6h12.8c2.56,0,4.267,1.707,4.267,4.267
+  s-1.707,4.267-4.267,4.267h-12.8v25.6h12.8c2.56,0,4.267,1.707,4.267,4.267c0,2.56-1.707,4.267-4.267,4.267h-12.8v25.6h46.933
+  c2.56,0,4.267,1.707,4.267,4.267c0,2.56-1.707,4.267-4.267,4.267h-46.933v25.6h12.8c2.56,0,4.267,1.707,4.267,4.267
+  c0,2.56-1.707,4.267-4.267,4.267h-12.8v25.6h12.8c2.56,0,4.267,1.707,4.267,4.267s-1.707,4.267-4.267,4.267h-12.8v29.867
+  c0,2.56-1.707,4.267-4.267,4.267c-2.56,0-4.267-1.707-4.267-4.267v-256c0-2.56,1.707-4.267,4.267-4.267h136.533
+  c2.56,0,4.267,1.707,4.267,4.267v256C264.64,263.04,262.933,264.746,260.373,264.746z M4.373,264.746
+  c-2.56,0-4.267-1.707-4.267-4.267V38.613c0-19.627,18.773-38.4,38.4-38.4h51.2c2.56,0,4.267,1.707,4.267,4.267
+  s-1.707,4.267-4.267,4.267h-51.2C24,8.746,8.64,24.106,8.64,38.613V260.48C8.64,263.04,6.933,264.746,4.373,264.746z"/>
  
+</svg>
+
+</aside>
+      </section> 
+    </article>
+  </article>
+  <!--skill-->
+  <article class="section " id="work-page"> 
+    
+    <!--work section 1-->
+    <section class="slide">
+      <h2 class="hidden">Semantic and seo friendly XHTML and CSS.</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/iamdan.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>I am Dan Jose Mathew </h2>
+            <h3>HTML5, CSS3,JQUERY</h3>
+            <a href="" target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>   
+    
+    
+    
+    
+     <section class="slide">
+      <h2 class="hidden">Semantic and seo friendly XHTML and CSS.</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/geetha.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Geetha Padmakumar</h2>
+            <h3>HTML5, CSS3,JQUERY, PHP</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section 1-->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/frame001.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Canberra Malayalee</h2>
+            <h3>HTML5, CSS3, WORDPRESS</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section 1-->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/gruenburge.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Gruenberg Munnar</h2>
+            <h3>HTML5, CSS3, PHP</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section vsss-->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/vsss.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>VIJAYAPURAM SOCIAL SERVICE SOCIETY</h2>
+            <h3>HTML5, JQUERY, PHP</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section Bridal Solutions -->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/bridal.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Bridal Solutions</h2>
+            <h3>HTML5, CSS3, JQUERY</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section hero -->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/hero.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Hero plumbing Solutions</h2>
+            <h3>HTML5, CSS3, BOOTSTRAP</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section astolapos --> 
+    <!--    <section class="slide">
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/astolapos.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>ASTOLAPOS</h2>
+            <h3>HTML5, JQUERY, PHP</h3>
+            <a href="#">Live View</a>
+             </div>
+        </div>
+      </aside>
+    </section>
+--> 
+    <!--work section rodios -->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/rodios.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>RODIOS MAGIC</h2>
+            <h3>HTML, CSS3,JQUERY</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section 2-->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/malayalee.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Taste of Malayalees</h2>
+            <h3>HTML, CSS, PHP</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    
+    <!--work section elias-->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/elias.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Elias Paintin</h2>
+            <h3>HTML, CSS, JQUERY</h3>
+            <a href=" ">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+    <!--work section valiyaveetil-->
+    <section class="slide">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <aside class="intro">
+        <div class="wrap-port"> <img src="images/work/valiyaveetil.png" alt="work-image"  />
+          <div class="work-dtls">
+            <h2>Valiyaveetil Trade Centre</h2>
+            <h3>HTML, CSS, JQUERY</h3>
+            <a href=" " target="_blank">Live View</a> </div>
+        </div>
+      </aside>
+    </section>
+  </article>
+  
+  <!--contact-->
+  <article class="section " id="contact-page">
+    <h3 class="hidden"> website standards</h3>
+    <article class="page">
+      <h2 class="hidden">Portfolio Website of sreelalks.com</h2>
+      <article class="contact-info">
+        <aside class="cont-form">
+          <h2>Keep in Touch with me</h2>
+           
+        </aside>
+        <aside class="cont_add">
+          <h3 class="hidden"> sreelal web designer contact details</h3>
+          <section class="cont-dtls">
+            <div class="row-left">
+                
+                <p>Cochin, Kerala</p>
+                <p>India</p>
+                <a href="callto:9747675783"> +91 9747 675 783</a><br>
+                <a href="mailto:mailsreelalks@gmail.com">mailsreelalks@gmail.com</a>
+            </div>
+            <div class="row-right">
+            Skype: <a href="">sreelal.ks3</a>  </div>
+          </section>
+        </aside>
+      </article>
+    </article>
+  </article>
+  <div class="keyboard-nav"></div>
+</section>
+<script type="text/javascript">
+	$(window).load(function(){
+		$('#form1').forms({
+			ownerEmail:'mailsreelalks@gmail.com'
+		})
+	})
+</script>
+<style>
+.fixed{position:fixed; 	top:5%;	left:0;		z-index: 70;	width: 100%;}
+</style>
+</body>
+</html>
