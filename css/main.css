@@ -1,4 +1,4 @@
- @import url('reset.css');
+@import url('reset.css');
 .hidden { position: absolute; width: 1px; height: 1px; clip: rect(1px 1px 1px 1px); /* IE6 & 7 */ clip: rect(1px, 1px, 1px, 1px); }
 body { line-height: 1; height: 100%; width: 100%; font-style: italic; color:#ccc; font-family: 'Open Sans', sans-serif; background:url(../images/home.jpg) no-repeat center bottom; background-size: cover;  background-attachment: fixed;}
 .container {
@@ -33,10 +33,10 @@ nav .menu_wrap { margin: 0 5%; }
 .home-content #scroll-info { width: 100%; text-align: center; }
 .home-content #scroll-info div { width: 100%; }
 .page { margin: auto; max-width: 1130px; width: 100%; }
-.page .port-info { float: left; width: 96%;   padding: 0 2%; margin-top: 145px; }
+.page .port-info { float: left; width: 96%;   padding: 0 2%; margin-top:35px; }
 .page .port-info .prf-img { width: 128px; height: 128px; border: 5px solid #fff; border-radius: 50%; box-shadow: 0 0 5px #e7e7e7; overflow: hidden; display: inline-block; }
 .page .port-info h1 { text-align: center; font-size: 36px; margin: 11% 0 5%; width: 100%; }
-.page .port-info p { text-align: center; line-height: 33px; margin: 50px 0; width: 100%; font-size: 21px; }
+.page .port-info p { text-align: center; line-height: 40px; margin: 50px 0; width: 100%; font-size: 21px;font-weight: 600; }
 .rspo_cont { display: none; }
 .tittle { text-align: center; font-size: 36px; margin: 150px 0 0; color: #FFF; width: 100%; }
 
@@ -150,6 +150,7 @@ nav .menu_wrap { margin: 0 5%; }
 
 
 .downlink {  bottom: 7%; margin-left:-18px; height: 51px; position: absolute; width: 45px;}
+.port-info strong { color: #55a5ad; }
 
 
 
@@ -289,6 +290,12 @@ body,
 #menu li a:after,
 #menu li a { margin: 0px !important; padding: 11px 0px !important; }
 }
+@media only screen and (max-width: 640px) {
+.home-content h1{font-size: 30px;}
+.home-content h3{font-size: 28px;}
+.home-content h6{line-height: 1.5; width: 50%;}
+.skill-info .skill-graph,.skill-info .skill-icon{width: 100%;}
+}
  @media only screen and (max-width: 479px) {
 .wrap-port img { display: none; }
 .wrap-port .work-dtls { opacity: 1; margin: 23%; width: 53.5%; padding-bottom: 50px; height: auto; background-color: transparent; border: 1px solid #FFF; }
@@ -317,12 +324,4 @@ body,
 .cont-dtls .row a em { padding: 3px 25px; }
 .contact-info h1 { text-align: left; text-indent: -211px; }
 }
-
-/*
-
-@media screen and (max-width: 390px)
-{
-}
-
-
-*/
+ 
