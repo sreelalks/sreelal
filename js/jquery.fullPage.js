@@ -48,7 +48,7 @@
 				//deleting the possible negative top
 				$('#superContainer').css('top', '0px');
 			}
-			console.log('working');
+			
 		};
 		
 			
@@ -69,7 +69,7 @@
 		}
 
 		$('body').wrapInner('<div id="superContainer" />');
-
+console.log('working');
 		//creating the navigation dots 
 		if (options.navigation) {
 			$('body').append('<div id="fullPage-nav"><ul></ul></div>');
