@@ -261,7 +261,7 @@
 					e = window.event || e;
 					var delta = Math.max(-1, Math.min(1,
 							(e.wheelDelta || -e.detail)));
-console.log('working 3');
+ 
 					if (!isMoving) { //if theres any #
 						var scrollable = $('.section.active').find('.scrollable');
 					
@@ -348,11 +348,23 @@ console.log('working 3');
 				destiny.addClass('active').siblings().removeClass('active');
 				scrollPage(destiny);
 			}
-			console.log('working 1');
+			 
 		};
 
+
+		
+
 		function scrollPage(element) {
-			console.log('working 2');
+
+// page animation custom...
+    $('.flip-animation').addClass('has-fromBodyToCover-in ');
+    setTimeout(function() {
+        $('.flip-animation').addClass('has-fromBodyToCover-out ');
+        setTimeout(function() {
+            $('.flip-animation').removeClass('has-fromBodyToCover-out has-fromBodyToCover-in');
+        }, 500);
+    }, 1500);
+
 			var scrollOptions = {}, scrolledElement;
 			var dest = element.position();
 			var dtop = dest !== null ? dest.top : null;
