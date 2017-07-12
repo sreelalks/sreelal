@@ -348,6 +348,7 @@
 				destiny.addClass('active').siblings().removeClass('active');
 				scrollPage(destiny);
 			}
+			console.log('working');
 		};
 
 		function scrollPage(element) {
@@ -564,7 +565,7 @@
 
 			//adjusting the position for the current section
 			var destinyPos = $('.section.active').position();
-console.log('working');
+
 			$('#superContainer').animate({
 				top : -destinyPos.top
 			}, options.scrollingSpeed, options.easing);
