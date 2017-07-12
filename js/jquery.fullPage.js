@@ -351,7 +351,7 @@
 		};
 
 		function scrollPage(element) {
-			console.log('working');
+			
 			var scrollOptions = {}, scrolledElement;
 			var dest = element.position();
 			var dtop = dest !== null ? dest.top : null;
@@ -384,7 +384,7 @@
 				setTimeout(function(){
 					isMoving = false;
 				}, 700);
-				console.log('working1');
+				 
 			});
 			
 			
@@ -564,7 +564,7 @@
 
 			//adjusting the position for the current section
 			var destinyPos = $('.section.active').position();
-
+console.log('working');
 			$('#superContainer').animate({
 				top : -destinyPos.top
 			}, options.scrollingSpeed, options.easing);
