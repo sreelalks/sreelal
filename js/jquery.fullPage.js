@@ -261,7 +261,7 @@
 					e = window.event || e;
 					var delta = Math.max(-1, Math.min(1,
 							(e.wheelDelta || -e.detail)));
-
+console.log('working 3');
 					if (!isMoving) { //if theres any #
 						var scrollable = $('.section.active').find('.scrollable');
 					
@@ -348,11 +348,11 @@
 				destiny.addClass('active').siblings().removeClass('active');
 				scrollPage(destiny);
 			}
-			console.log('working');
+			console.log('working 1');
 		};
 
 		function scrollPage(element) {
-			
+			console.log('working 2');
 			var scrollOptions = {}, scrolledElement;
 			var dest = element.position();
 			var dtop = dest !== null ? dest.top : null;
