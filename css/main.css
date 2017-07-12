@@ -262,6 +262,172 @@ float: right;
 
 
 
+.flip-animation {
+  position: fixed;
+  z-index: 79;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.flip-animation-back, .flip-animation-first, .flip-animation-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  background-color: #1A293A;
+}
+.flip-animation-back {
+  opacity: 0;
+  background-color:#1A293A;
+}
+.flip-animation-first {
+  z-index: 2;
+  -webkit-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  transform: scale(1, 0);
+  background-color: rgba(26, 26, 26, .5)
+}
+.flip-animation-second {
+  z-index: 3;
+  -webkit-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  transform: scale(1, 0)
+}
+.flip-animation.has-fromCoverToBody-in {
+  visibility: visible
+}
+.flip-animation.has-fromCoverToBody-in .flip-animation-back {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-out 0s;
+  transition: opacity 1s ease-out 0s
+}
+.flip-animation.has-fromCoverToBody-in .flip-animation-first, .flip-animation.has-fromCoverToBody-in .flip-animation-second {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+.flip-animation.has-fromCoverToBody-in .flip-animation-first {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1), -webkit-transform 1s cubic-bezier(.23, 1, .38, 1)
+}
+.flip-animation.has-fromCoverToBody-in .flip-animation-second {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1) .3s;
+  transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1) .3s;
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1) .3s;
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1) .3s, -webkit-transform 1s cubic-bezier(.23, 1, .38, 1) .3s
+}
+.flip-animation.has-fromCoverToBody-out {
+  visibility: visible
+}
+.flip-animation.has-fromCoverToBody-out .flip-animation-back {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-out 0s;
+  transition: opacity .5s ease-out 0s
+}
+.flip-animation.has-fromCoverToBody-out .flip-animation-first {
+  visibility: hidden
+}
+.flip-animation.has-fromCoverToBody-out .flip-animation-first, .flip-animation.has-fromCoverToBody-out .flip-animation-second {
+  -webkit-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1), -webkit-transform 1s cubic-bezier(.23, 1, .38, 1)
+}
+.flip-animation.has-fromBodyToCover-in {
+  visibility: visible
+}
+.flip-animation.has-fromBodyToCover-in .flip-animation-back {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-out 0s;
+  transition: opacity 1s ease-out 0s
+}
+.flip-animation.has-fromBodyToCover-in .flip-animation-first, .flip-animation.has-fromBodyToCover-in .flip-animation-second {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0
+}
+.flip-animation.has-fromBodyToCover-in .flip-animation-first {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1), -webkit-transform 1s cubic-bezier(.23, 1, .38, 1)
+}
+.flip-animation.has-fromBodyToCover-in .flip-animation-second {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1) .3s;
+  transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1) .3s;
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1) .3s;
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1) .3s, -webkit-transform 1s cubic-bezier(.23, 1, .38, 1) .3s
+}
+.flip-animation.has-fromBodyToCover-out {
+  visibility: visible
+}
+.flip-animation.has-fromBodyToCover-out .flip-animation-back {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-out .1s;
+  transition: opacity .5s ease-out .1s
+}
+.flip-animation.has-fromBodyToCover-out .flip-animation-first {
+  visibility: hidden
+}
+.flip-animation.has-fromBodyToCover-out .flip-animation-first, .flip-animation.has-fromBodyToCover-out .flip-animation-second {
+  -webkit-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: -webkit-transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1);
+  transition: transform 1s cubic-bezier(.23, 1, .38, 1), -webkit-transform 1s cubic-bezier(.23, 1, .38, 1)
+}
+.flip-animation.has-fade-in {
+  visibility: visible
+}
+.flip-animation.has-fade-in .flip-animation-back {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-out 0s;
+  transition: opacity 1s ease-out 0s
+}
+.flip-animation.has-fade-out {
+  visibility: visible
+}
+.flip-animation.has-fade-out .flip-animation-back {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out
+}
+
+
+
 
 
 
