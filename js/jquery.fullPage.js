@@ -69,7 +69,7 @@
 		}
 
 		$('body').wrapInner('<div id="superContainer" />');
-console.log('working');
+
 		//creating the navigation dots 
 		if (options.navigation) {
 			$('body').append('<div id="fullPage-nav"><ul></ul></div>');
@@ -351,6 +351,7 @@ console.log('working');
 		};
 
 		function scrollPage(element) {
+			console.log('working');
 			var scrollOptions = {}, scrolledElement;
 			var dest = element.position();
 			var dtop = dest !== null ? dest.top : null;
@@ -383,6 +384,7 @@ console.log('working');
 				setTimeout(function(){
 					isMoving = false;
 				}, 700);
+				console.log('working1');
 			});
 			
 			
