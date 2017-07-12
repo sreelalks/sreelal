@@ -48,6 +48,7 @@
 				//deleting the possible negative top
 				$('#superContainer').css('top', '0px');
 			}
+			console.log('working');
 		};
 		
 			
